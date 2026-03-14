@@ -76,6 +76,9 @@ vim.o.confirm = true
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- yanking to the system clipboard
+vim.keymap.set({ 'n', 'v' }, 'y', '"+y', { desc = 'Copy to system clipboard' })
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
